@@ -1,0 +1,47 @@
+version: "3.1"
+services:
+  db:
+    image: mysql:8
+    restart: unless-stopped
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: portafolio-cv
+      MYSQL_USER: usr_portafolio
+      MYSQL_PASSWORD: pass_portafolio
+      MYSQL_ROOT_PASSWORD: admin
+    volumes:
+      - ./dump:/docker-entrypoint-initdb.d
+      - ./conf:/etc/mysql/conf.d
+      - ./persistent:/var/lib/mysql
+    networks:
+      - default
+  www:
+    image: php:8.1-apache-buster
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - db
+    depends_on:
+      - db
+    networks:
+      - default
+  phpmyadmin:
+    image: phpmyadmin:5.2.1
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: admin
+    depends_on:
+      - db
+    networks:
+      - default
+volumes:
+  persistent:
+

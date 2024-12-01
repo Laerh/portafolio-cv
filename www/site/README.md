@@ -1,20 +1,25 @@
 # Portafolio CV
+
+Proyecto de maquetado de mi portafolio utilizando HTML, CSS y JavaScript.
+
+## Proyecto
+
+- [Landing Page de tipo Portafolio-CV](https://Laerh.github.io/portafolio-cv/assets/hero-image-home.jpg)
+
+# Broobe Challenge
 ## _Manual de instalación_
 
 Listado de tecnologías utilizadas:
 
-- [PHP](https://www.php.net)
-- [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript)
-- [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
-- [Apache](https://www.nginx.com/)
-- [Mysql](https://www.mysql.com/)
-- [phpMyAdmin](https://www.phpmyadmin.net/)
-- [Markdown](https://markdown.es/)
+- [PHP](https://www.php.net) - para el lado del servidor.
+- [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript) - para validaciones y funcionalidades en el lado del cliente.
+- [Docker](https://www.docker.com/) - Despliegue de aplicación usando contenedores y armando la estructura con docker-compose.
+- [Nginx](https://www.nginx.com/) - como servidor web/proxy para trabajar las peticiones.
+- [Mysql](https://www.mysql.com/) - como motor de base de datos.
+- [MySQL Workbench 8.0 CE](https://www.mysql.com/products/workbench/) - como gestor de base de datos.
+- [Markdown](https://markdown.es/) - para el diseño del README.md.
 
-## Instalación con Docker
+## Installation
 
 Descomprimir el archivo zip o clonar el repositorio de [github](https://github.com/gdklos/broobe_challenge.git).
 
